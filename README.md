@@ -1,6 +1,6 @@
 # grupo-vitrine
 
-## Workshop - Visão Computacional - 14/04/2023
+## Workshop - Visão Computacional - 14/04/2023 - Parte 1
 Link: https://docs.google.com/presentation/d/1EUHP-k4v0i-oA-06YcYuU8AMmqEcgPVqKyF6SA_nuYY/edit?usp=sharing
 #### Leitura e exercícios propostos nos slides com título "Para Estudar/Exercícios" ####
 
