@@ -17,3 +17,6 @@ Link: https://github.com/marycamila184/visao-computacional
 
 ## Material da Ciência de Dados
 Link: https://github.com/marycamila184/positivo-data-science
+
+## Source imagens
+Link: https://drive.google.com/drive/folders/1FNWf6mlee5w2umXd149_aBFYrfUv6d50
