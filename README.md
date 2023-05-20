@@ -12,6 +12,10 @@ Arquivo .py com código para utilização de webcam esta no repositório
 Link: https://docs.google.com/presentation/d/1n2oiY0KApmPw99UB8DeB3ufBUR9ZLUySqVN9eW2G5JE/edit?usp=sharing
 #### Leitura e exercícios propostos nos slides com título "Para Estudar/Exercícios" ####
 
+## Encontro - Encontro 20/05/2023
+https://docs.google.com/presentation/d/1yUM4RbB8Cbhcsib7I7TVHzN9y_0k6bLWmJh7gFydnck/edit?usp=sharing
+#### Implementação HaarCascade ####
+
 ## Material da Disciplina de Visão Computacional
 Link: https://github.com/marycamila184/visao-computacional
 
