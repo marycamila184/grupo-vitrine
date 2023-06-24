@@ -15,42 +15,41 @@ def detectMovement(original, detector):
 	
 	#copia imagem original
 	frame = original.copy()
-	#return frame
+	#original = frame
 	
 	#converte tons de cinza
 	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-	#return frame
+	#original = frame
 	
 	#equaliza histograma
 	frame = cv2.equalizeHist(frame)
-	#return frame
+	#original = frame
 	
 	#pega suaviacao
 	blur = cv2.GaussianBlur(frame, (9, 9), 33)
-	#return blur
+	#original = blur
 	
 	#usa suavizacao para aumentar nitidez
 	frame = cv2.addWeighted(frame, 1.5, blur, -0.5, 0);
-	#return frame
+	#original = frame
 	
 	#pega mascara pelo modo canny
 	#mask = cv2.Canny(frame, 30, 200)
-	#return mask
+	#original = mask
 		
 	#pega mascara pela deteccao de background
 	mask = detector.apply(frame)
-	#return mask
+	#original = mask
 	
 	#aplica treshold na mascara
 	_, mask = cv2.threshold(mask, 254, 255, cv2.THRESH_BINARY)
-	#return mask
+	#original = mask
 	
 	#pega contornos na mascara
 	contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 	
 	#desenha todos os contornos em ciano
 	#cv2.drawContours(original, contours, -1, (255,255,0), 1)
-	#return original
 	
 	#variaveis para guardar area total dos contornos
 	minX, minY, maxX, maxY = 0, 0, 0, 0
@@ -86,7 +85,7 @@ def detectMovement(original, detector):
 	#desenha area total na regiao de movimento em vermelho
 	#cv2.rectangle(original, (minX, minY), (maxX, maxY), (0,0,255), 1)
 	
-	return minX, minY, maxX - minX, maxY - minY
+	return original, minX, minY, maxX - minX, maxY - minY
 
 #####################################################################################
 
@@ -130,7 +129,7 @@ def showcase():
 			
 			#detecta movimento
 			if isTracking == False:
-				x, y, w, h = detectMovement(frame, detector)
+				frame, x, y, w, h = detectMovement(frame, detector)
 				area = w * h
 				#testa se area detectada eh adequada
 				if h > w and area > 10000 and area < 100000:
