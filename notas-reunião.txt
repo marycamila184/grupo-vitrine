@@ -1,0 +1,49 @@
+Reunião 24/06/2023
+    Steps
+    -> Head position and angles (yaw, roll, pitch): Calculated from landmarks
+    -> Eyes positions: Calculated from landmarks
+    -> Iris position with respect to the eye landmarks: Calculated from landmarks
+    -> Distance from the eyes to the screen monitor: If you have a depth camera, it could be easy
+
+    Estimador de olhar
+    https://github.com/clarisli/Gaze-Estimation
+    https://github.com/antoinelame/GazeTracking/tree/master/gaze_tracking
+    https://github.com/pperle/gaze-tracking-pipeline
+    https://towardsdatascience.com/real-time-eye-tracking-using-opencv-and-dlib-b504ca724ac6
+    -> http://dlib.net/
+
+    https://github.com/1adrianb/face-alignment
+    https://www.analyticsvidhya.com/blog/2022/03/facial-landmarks-detection-using-mediapipe-library/
+    -> import mediapipe as mp
+
+    -> Primeiro problema
+    -> Quem são as pessoas que estão olhando para a vitrine?
+    -> Quais são as pessoas que nos interessam?
+        -> Talvez tejam pessoas que esteja de costas ou mexendo no celular
+            -> Identificar primeiro se ha olhos direcionados para a vitrine.
+                -> Isolar a pessoa
+                -> Isolar o rosto dela
+                -> Verificar o olhar
+                -> Olhar esta direcionado para a vitrine?
+                -> Tempo?
+            -> Ver a iris do olho. 
+            -> Restrição de tamanho da imagem
+                -> Yolo pode perder performance se a pessoa esta longe
+                -> Faster CNN pode ajudar
+                
+        -> Camera estatica
+        -> Conheceremos a posição dos produtos em relação a camera
+        -> A posição da pessoa em relação ao produto e exata. 
+        
+    -> Saber se é a mesma pessoa?
+    -> Perde a pessoa no rastreamento, mas precisa identificar ela de novo?
+    -> Boa iluminação? Importa na captura das imagens?
+    -> Comite de etica?
+    -> Direito de imagem? Podemos gravar imagens no segundo andar do vermelho?
+    -> Consentimento das pessoas que estao sendo filmadas
+    -> Infra para gravar imagens
+    -> Embarcados para gravação das imagens?
+    -> Computador com webcam?
+    
+    Fase futura
+    -> Aonde a camera esta situada? Ela mesmo descobriria
